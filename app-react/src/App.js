@@ -1,14 +1,12 @@
 import React from "react";
-
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
       <body>
     <h1>My App in React</h1>
     <main>
     </main>
-    <footer>
-        <p>Copyright © Dashboard 2022</p>
-    </footer>
+  <Footer/>
     </body>
   );
 }
