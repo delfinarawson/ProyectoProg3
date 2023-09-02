@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import {Route} from "react-router-dom";
 function App() {
   return (
       <body>
