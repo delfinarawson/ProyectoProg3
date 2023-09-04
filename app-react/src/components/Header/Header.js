@@ -2,14 +2,16 @@ import React from "react";
 import {Link} from "react-router-dom";
 function Header(props){
     return(
-        <nav>
-            <img src="../public/logo" alt="logo"></img>
+    <header>
+        <img src="../public/logo" className="logo" alt="logo"></img>
+        <nav className="inicio">
             <ul className="main-nav">
             <li> <Link to ="/">Home</Link></li>
             <li> <Link to ="/favoritos">Favoritos</Link></li>
             <li> <Link to ="/vertodas">Ver todas</Link></li>
         </ul>
-    </nav>      
+        </nav> 
+    </header>     
     )
 }
 export default Header;
