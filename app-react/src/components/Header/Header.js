@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 function Header(props){
     return(
         <nav>
-            <img alt="logo"></img>
+            <img src="../public/logo" alt="logo"></img>
             <ul className="main-nav">
             <li> <Link to ="/">Home</Link></li>
             <li> <Link to ="/favoritos">Favoritos</Link></li>
