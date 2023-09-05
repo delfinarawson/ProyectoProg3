@@ -31,8 +31,8 @@ class Home extends Component{
         return(
             <div>
         <Buscador/>
-        {this.state.populares.map((peli, idx)=> <Pelis name={peli.results.title} descripcion={peli.result.overview} imagen={peli.results.poster_path}/>)}
-        {this.state.upcoming.map((peliup, idx)=> <PelisUp name={peliup.results.title} descripcion={peliup.result.overview} imagen={peliup.results.poster_path}/>)}
+        {this.state.populares.map((peli, idx)=> <Pelis name={peli.results[idx].original_title} descripcion={peli.results[idx].overview} imagen={peli.results.poster_path}/>)}
+        {this.state.upcoming.map((peliup, idx)=> <PelisUp name={peliup.results[idx].original_title} descripcion={peliup.results[idx].overview} imagen={peliup.results.poster_path}/>)}
         
         </div>
         )
