@@ -38,7 +38,7 @@ class Home extends Component{
             <article className="contenedor-peliculas">
             <h2 className="titulo">Películas Mejor Calificadas</h2>
             <div className="galeria">
-                {this.state.populares.slice(0,6).map((peli, idx)=> <Pelis key={peli + idx} datosPop={peli}/>)}
+                {this.state.populares.map((peli, idx)=> <Pelis key={peli + idx} datosPop={peli}/>)}
             </div>
             </article>
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
