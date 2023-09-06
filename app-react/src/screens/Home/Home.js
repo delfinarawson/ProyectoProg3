@@ -3,6 +3,7 @@ import Buscador from "../../components/Buscador/Buscador";
 import Pelis from "../../components/Pelis/Pelis";
 import PelisUp from "../../components/PelisUp/PelisUp.js";
 import "./styles.css";
+import "https://kit.fontawesome.com/ed388a348f.js";
 
 class Home extends Component{
     constructor(){
