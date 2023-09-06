@@ -36,7 +36,7 @@ class Home extends Component{
         <section className="contenedor">
             <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
             <article className="contenedor-peliculas">
-            <h2 className="titulo">Películas Mejor Calificadas</h2>
+            <h2 className="titulo">Películas mejor calificadas</h2>
             <div className="galeria">
                 {this.state.populares.map((peli, idx)=> <Pelis key={peli + idx} datosPop={peli}/>)}
             </div>
@@ -47,7 +47,7 @@ class Home extends Component{
         <section className="contenedor">
             <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
             <article className="contenedor-peliculas">
-            <h2 className="titulo">Películas Mejor Calificadas</h2>
+            <h2 className="titulo">Películas próximas a estrenarse</h2>
             <div className="galeria">
                  {this.state.upcoming.map((peliup, idx)=> <PelisUp nkey={peliup + idx} datosUp={peliup}/>)}
             </div>
