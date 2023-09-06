@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import Buscador from "../../components/Buscador/Buscador";
-import Pelis from "../../components/Pelis/Pelis"
-import PelisUp from "../../components/PelisUp/PelisUp.js"
+import Pelis from "../../components/Pelis/Pelis";
+import PelisUp from "../../components/PelisUp/PelisUp.js";
+import "./styles.css";
 
 class Home extends Component{
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
         this.state={
             populares:[],
-            upcoming:[]
+            upcoming:[],
     }
    
     }
@@ -29,12 +30,36 @@ class Home extends Component{
 
     render(){
         return(
-            <div>
+        <React.Fragment>
         <Buscador/>
-        {this.state.populares.map((peli, idx)=> <Pelis name={peli.results[idx].original_title} descripcion={peli.results[idx].overview} imagen={peli.results.poster_path}/>)}
-        {this.state.upcoming.map((peliup, idx)=> <PelisUp name={peliup.results[idx].original_title} descripcion={peliup.results[idx].overview} imagen={peliup.results.poster_path}/>)}
+
+        <section className="contenedor">
+            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
+            <article className="contenedor-peliculas">
+            <h2 className="titulo">Películas Mejor Calificadas</h2>
+            <div className="galeria">
+                {this.state.populares.slice(0,6).map((peli, idx)=> <Pelis key={peli + idx} datosPop={peli}/>)}
+            </div>
+            </article>
+            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
+        </section>
+
+        <section className="contenedor">
+            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
+            <article className="contenedor-peliculas">
+            <h2 className="titulo">Películas Mejor Calificadas</h2>
+            <div className="galeria">
+                 {this.state.upcoming.map((peliup, idx)=> <PelisUp nkey={peliup + idx} datosUp={peliup}/>)}
+            </div>
+            </article>
+            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
+        </section>
+
+
+       
+       
         
-        </div>
+        </React.Fragment>
         )
     }
     

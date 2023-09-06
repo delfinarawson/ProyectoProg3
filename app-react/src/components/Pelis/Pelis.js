@@ -1,20 +1,23 @@
-import React from "react";
+import React, {Component} from "react";
 import {Link} from "react-router-dom";
-function Pelis(props){
-    return(
-        <section className="contenedor">
-        <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
-        <article className="contenedor-peliculas">
-            <h2 className="titulo">Películas Mejor Calificadas</h2>
-            <div className="galeria">
-            <div className = "pelicula"> 
-                
-                </div>
-            </div>
-        </article>
-        <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
-    </section>
-      
-    )
+
+class Pelis extends Component{
+    constructor(props){
+        super(props)
+        this.state={}
+    }
+
+    render(){
+        return(
+        <div className = "pelicula"> 
+				<img src={`https://image.tmdb.org/t/p/w500${this.props.datosPop.poster_path}`} alt="pelis"/>
+				<h4 className="titulos-peliculas">{this.props.datosPop.title}</h4>
+				<p className="fechas">{this.props.datosPop.release_date}</p>
+                <p className="fechas">Ver más</p>
+                <Link to='' className="detalle">Ver detalle</Link>
+        </div>
+        )
+    }
 }
+
 export default Pelis;
