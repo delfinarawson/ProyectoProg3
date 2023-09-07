@@ -15,7 +15,7 @@ class Pelis extends Component{
 				<h4 className="titulos-peliculas">{this.props.datosPop.title}</h4>
 				<p className="fechas">{this.props.datosPop.release_date}</p>
                 <p className="fechas">Ver más</p>
-                <Link to='' className="detalle">Ver detalle</Link>
+                <Link to={`/detalle/${this.props.datosPop.id}`} className="detalle">Ver detalle</Link>
         </div>
         )
     }

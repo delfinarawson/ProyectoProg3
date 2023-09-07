@@ -16,7 +16,7 @@ class Pelis extends Component{
 				<p className="fechas">{this.props.datosUp.release_date}</p>
              
                 <p className="fechas">Ver más</p>
-                <Link to='' className="detalle">Ver detalle</Link>
+                <Link to={`/detalle/${this.props.datosUp.id}`} className="detalle">Ver detalle</Link>
         </div>
         )
     }
