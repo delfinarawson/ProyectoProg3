@@ -4,7 +4,7 @@ import Pelis from "../../components/Pelis/Pelis";
 import "./styles.css";
 //import "https://kit.fontawesome.com/ed388a348f.js";
 
-class Home extends Component{
+class Popular extends Component{
     constructor(){
         super()
         this.state={
@@ -26,7 +26,6 @@ class Home extends Component{
     render(){
         return(
         <React.Fragment>
-        <Buscador/>
 
         <section className="contenedor">
             <article className="contenedor-peliculas">
@@ -42,4 +41,4 @@ class Home extends Component{
     }
     
 }
-export default Home;
+export default Popular;
