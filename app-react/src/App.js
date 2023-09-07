@@ -6,6 +6,7 @@ import Detalle from "./screens/Detalle/Detalle";
 import Favoritos from "./screens/Favoritos/Favoritos";
 import Home from "./screens/Home/Home";
 import Popular from "./screens/Popular/Popular";
+import Error404 from "./components/Error404/Error";
 import Upcoming from "./screens/Upcoming/Upcoming";
 
 
@@ -21,7 +22,7 @@ function App() {
         <Route path="/detalle/:id" component={Detalle} />
         <Route path="/popular" component={Popular} />
         <Route path="/upcoming" component={Upcoming} />
-        <Route component={Error404} />
+        <Route path= "" component={Error404} />
       </Switch>
     </main>
   <Footer/>
