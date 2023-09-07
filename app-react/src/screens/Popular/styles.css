@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: 'Open Sans', sans-;
+}
+
+.header{
+    padding: 10px ;
+    width: 100%;
+    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
+    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
+    background: rgba(0,0,0,0.9);
+}
+
+.inicio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo2{
+    width: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+
+header .logo{
+    width: 200px;
+}
+
+header nav a{
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+
+header .lupita{
+    font-family: 'Open sans';
+    color: #AAA;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.button{ 
+    font-family: 'open sans', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    margin-left: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px
+}
+
+/* Aca hice lo de la pelicula principal */
+.pelicula-principal {
+    font-size: 16px;
+    min-height: 100vh;
+    color: #FFF;
+    background: url();
+    background-position: center end; /* dos centers: lo centre de forma horizontal y luego vertical */
+    background-size: cover;
+    margin-bottom: 50px;
+    display: flex;  /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
+    align-items: end;
+} 
+
+/* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
+
+.pelicula-principal .peli {
+    margin: 0 auto;
+    margin: 5vh;
+}
+.pelicula-principal .titulo {
+    font-weight: 600; /* es el que descargue que era el semi bold */ 
+    font-size: 30px; 
+    margin-bottom: 2vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
+}
+.pelicula-principal .descripcion {
+    font-weight: normal; 
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 50%; 
+    margin-bottom: 2vh;
+}
+.pelicula-principal .boton{ 
+    background: rgba(0, 0, 0, 0.5);
+    border: none; 
+    border-radius: 5px; 
+    padding: 15px; 
+    color: #FFF;
+    margin-right: 20px;  
+    font-size: 18px; 
+}
+.pelicula-principal .boton i{
+    margin-right: 15px;
+}
+.pelicula-principal .boton:hover{
+    background: #FFF;
+    color: black;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.contenedor .flecha-izquierda,
+.contenedor .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    line-height: 40px;
+    width: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 100; 
+    transition: .2s ease all;
+}
+.contenedor .flecha-izquierda:hover,
+.contenedor .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.contenedor .flecha-izquierda{
+    left: 0;
+}
+
+.contenedor .flecha-derecha{
+    right: 0;
+}
+
+.contenedor-peliculas{
+    width: 100%;
+    padding: 20px 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
+}
+
+.contenedor-peliculas .galeria{
+    display: flex;
+    flex-wrap: nowrap; 
+}
+
+.contenedor-peliculas .galeria .pelicula{
+    transition: .3s ease all; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); 
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+.espacio .genero{
+    color: white;
+    text-decoration: none;
+}
+
+.contenedor-peliculas .galeria .pelicula img{
+        width: 180px;
+        height: 250px;
+        margin: 30px; 
+        vertical-align: top;
+    }
+
+.pelicula {
+        color: white;
+        padding: 5px;
+        font-family: 'open sans', sans-serif;
+        text-align: center;
+}
+.boton-heart{ 
+    background: rgba(0, 0, 0, 0.5);
+    border: none; 
+    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
+    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+    color: #FFF;
+    margin-right: 20px;  
+    font-size: 18px; 
+    font-family: 'open sans', sans-serif;
+ }
+ 
+ .boton-heart:hover{
+    background: #FFF;
+    color: black;
+ }
+ 
+
+.titulo{
+    font-family: "open sans", sans-serif;
+    color: white;
+}
+
+.fechas {
+    color: #AAA ;
+    text-align: center;
+    font-family: 'Arial, Helvetica', sans-serif;
+}
+
+ 
+footer {
+    color: #AAA;
+    size: 14px;
+    text-align: left;
+    font-family: "open sans", sans-serif;
+    padding-top: 50px;
+}
+
+@media (max-width: 768px){
+    header .logo {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    header .contenedor {
+        flex-direction: column; 
+        text-align: center;
+        font-size: 14px;
+    }
+    header .lupita{
+        padding-top: 10px;
+    }
+    .pelicula-principal .contenedor{
+        font-size: 12px; 
+    }
+    .pelicula-principal .descripcion {
+        max-width: 100%;
+    }
+    .contenedor {
+        max-width: 100%;
+    }
+    .contenedor .contenedor-peliculas .galeria{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
+        gap: 20px;
+    }
+    .contenedor .flecha-izquierda, 
+    .contenedor .flecha-derecha {
+        display: none;
+    }
+}
+

@@ -16,7 +16,7 @@ function App() {
     <h1>My App in React</h1>
     <main>
       <Switch>
-        <Route path="/" component={Home} />
+        <Route path="/" exact={true} component={Home} />
         <Route path="/favoritos" component={Favoritos} />
         <Route path="/detalle" component={Detalle} />
         <Route path="/popular" component={Popular} />

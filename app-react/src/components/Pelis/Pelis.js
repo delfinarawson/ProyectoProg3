@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import FontAwesomeIcon from "https://fontawesome.com/icons/heart?f=classic&s=solid";
+//import FontAwesomeIcon from "https://fontawesome.com/icons/heart?f=classic&s=solid";
 
 class Pelis extends Component{
     constructor(props){
