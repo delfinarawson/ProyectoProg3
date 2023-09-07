@@ -37,7 +37,7 @@ class Home extends Component{
         <section className="contenedor">
             <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
             <article className="contenedor-peliculas">
-            <h2 className="titulo">Películas mejor calificadas</h2>
+            <h2 className="titulo">Películas Populares</h2>
             <div className="galeria">
                 {this.state.populares.slice(0,6).map((peli, idx)=> <Pelis key={peli + idx} datosPop={peli}/>)}
             </div>

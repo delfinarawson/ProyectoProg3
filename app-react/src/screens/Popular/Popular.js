@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Buscador from "../../components/Buscador/Buscador";
 import Pelis from "../../components/Pelis/Pelis";
 import "./styles.css";
 //import "https://kit.fontawesome.com/ed388a348f.js";
@@ -9,6 +8,7 @@ class Popular extends Component{
         super()
         this.state={
             populares:[],
+            upcoming:[]
            
     }
    
@@ -26,16 +26,16 @@ class Popular extends Component{
     render(){
         return(
         <React.Fragment>
-
         <section className="contenedor">
+            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
             <article className="contenedor-peliculas">
-            <h2 className="titulo">Películas Populares</h2>
+            <h2 className="titulo">Todas las películas populares</h2>
             <div className="galeria">
                 {this.state.populares.map((peli, idx)=> <Pelis key={peli + idx} datosPop={peli}/>)}
             </div>
             </article>
+            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
         </section>
-        
         </React.Fragment>
         )
     }

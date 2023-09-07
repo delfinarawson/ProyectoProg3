@@ -1,0 +1,1 @@
+//rutas parametrizadas: hacemos un fetxch de la api y guardamos la lista de .results, despues ver el doc de tuti que dice como comparar los ids y demás. 
