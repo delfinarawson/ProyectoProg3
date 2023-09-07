@@ -36,8 +36,11 @@ class Upcoming extends Component{
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
         </section>
 
-
-       
+        <form className="lupita" action="./busqueda.html" method="get">
+            <input className="lupita" type="text" name="filtro" placeholder="¿Qué filtro desea aplicar?" value=""></input>
+            <button type="submit" className="button">filtrar</button>
+            <p className="aviso"></p>
+        </form>
        
         
         </React.Fragment>
