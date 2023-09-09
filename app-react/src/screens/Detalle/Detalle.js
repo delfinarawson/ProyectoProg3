@@ -26,7 +26,10 @@ class Detalle extends Component{
        <section class="info">
         <h1 class="titulo"></h1>
         <article class="bloque">
-           <Detail titulo={this.state.peliculaDet.title} fecha={this.state.peliculaDet.release_date} genero={"divertido"} duracion={"2:30hs"} calificacion={this.state.peliculaDet.vote_avarage} />
+            {
+                this.state.peliculaDet.map((peli, idx)=> <Detail titulo={this.state.peliculaDet.title} fecha={this.state.peliculaDet.release_date} genero={"divertido"} duracion={"2:30hs"} calificacion={this.state.peliculaDet.vote_avarage} />)
+            }
+           
 
         </article>
     </section>
