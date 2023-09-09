@@ -8,6 +8,7 @@ import Home from "./screens/Home/Home";
 import Popular from "./screens/Popular/Popular";
 import Error404 from "./components/Error404/Error";
 import Upcoming from "./screens/Upcoming/Upcoming";
+import Results from "./screens/Results/Results";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/detalle/:id" component={Detalle} />
         <Route path="/popular" component={Popular} />
         <Route path="/upcoming" component={Upcoming} />
+        <Route path="/busqueda/:search" component={Results} />
         <Route path= "" component={Error404} />
       </Switch>
     </main>

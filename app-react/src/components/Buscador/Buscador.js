@@ -1,16 +1,37 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 //import {Link} from "react-router-dom";
 
-function Buscador(props){
-    return(
-        <div className="buscador">
-		<form className="lupita" action="./busqueda.html" method="get">
-            <input className="lupita" type="text" name="busqueda" placeholder="¿Qué quiere ver?" value=""></input>
-            <button type="submit" className="button">Buscar</button>
-            <p className="aviso"></p>
-        </form> 
-        </div>
-    )
+class Buscador extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            busqueda: "",
+            resultados: []
+        }
+    }
+    prevernir(e){
+        e.preventDefault()
+    }
+    buscar(e){
+        this.setState(
+            {
+                busqueda: e.target.value
+            }
+        )
+    }
+    render(){
+        return(
+            <div className="buscador">
+            <form className="lupita" onSubmit={(e)=> this.prevernir(e)}>
+                <input className="lupita" type="text" name="busqueda" placeholder="¿Qué quiere ver?" onChange={(e)=>this.buscar(e)} value= {this.state.busqueda}></input>
+               <Link to={`/busqueda/${this.state.busqueda}`}> <button type="submit" className="button">Buscar</button> </Link>
+                <p className="aviso"></p>
+            </form> 
+            </div>
+        )
+    }
+    
 }
 export default Buscador;
 
