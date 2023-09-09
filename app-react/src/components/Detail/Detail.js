@@ -8,20 +8,20 @@ class Detail extends Component{
 
     render(){
         return(
-            <div class="sub-container">
-            <img class="imagen" src="" alt="no respires"/>
-            <div class="letras">
+            <div className="sub-container">
+            <img className="imagen" src="" alt="no respires"/>
+            <div className="letras">
                 <h2 className= "titulo">{this.props.titulo}</h2>
-                <div class="titulos espacio">FECHA DE ESTRENO</div>
-                <div class="espacio estreno">{this.props.fecha}</div>
-                <div class="titulos espacio">GÉNERO</div>
-                <div class="espacio genero">{this.props.genero}</div>
-                <div class="titulos espacio">DURACIÓN</div>
-                <div class="espacio duracion">{this.props.duracion}</div>
-                <div class="titulos espacio">RATING</div>
-                <div class="espacio rate">{this.props.calificacion}</div>
+                <div className="titulos espacio">FECHA DE ESTRENO</div>
+                <div className="espacio estreno">{this.props.fecha}</div>
+                <div className="titulos espacio">GÉNERO</div>
+                <div className="espacio genero">{this.props.genero}</div>
+                <div className="titulos espacio">DURACIÓN</div>
+                <div className="espacio duracion">{this.props.duracion}</div>
+                <div className="titulos espacio">RATING</div>
+                <div className="espacio rate">{this.props.calificacion}</div>
               
-                <button class="boton-heart"><i class="icon-heart"></i></button>
+                <button className="boton-heart"><i className="icon-heart"></i></button>
             
             </div>
             </div>

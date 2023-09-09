@@ -5,6 +5,7 @@ import PelisUp from "../../components/PelisUp/PelisUp.js";
 import "./styles.css";
 import "https://kit.fontawesome.com/ed388a348f.js";
 
+
 class Home extends Component{
     constructor(){
         super()

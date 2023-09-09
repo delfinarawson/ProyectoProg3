@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import Pelis from "../../components/Pelis/Pelis";
 import "./styles.css";
 //import "https://kit.fontawesome.com/ed388a348f.js";
+import Filtrado from "../../components/Filtrado/Filtrado";
+import PeliFiltrada from "../../components/PeliFiltrada/PeliFiltrada";
 
 class Popular extends Component{
     constructor(){
         super()
         this.state={
             populares:[],
-            upcoming:[]
            
     }
    
@@ -23,6 +24,17 @@ class Popular extends Component{
       
     };
 
+    filtrarPopulares(peliAFiltrar){
+        //que deje solo las pelis en donde el texto a filtrar este incluido en el nombre. 
+        let pelisFiltradas = this.state.populares.filter(function(peli){
+            return peliAFiltrar.includes(peli.title) //includes retorna true o false
+        })
+
+        this.setState({
+            pelis: pelisFiltradas,
+        })
+    }
+
     render(){
         return(
         <React.Fragment>
@@ -36,11 +48,17 @@ class Popular extends Component{
             </article>
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
         </section>
-        <form className="lupita" action="" method="get">
-            <input className="lupita" type="text" name="filtro" placeholder="¿Qué filtro desea aplicar?" value=""></input>
-            <button type="submit" className="button">filtrar</button>
-            <p className="aviso"></p>
-        </form> 
+
+
+        <section>
+            <Filtrado filtrar={(texto)=> this.filtrarPopulares(texto)}/>
+            {
+                this.state.populares.map(function(peli){
+                    return <PeliFiltrada key={peli.id} datosPeli={peli} />
+                })
+            }
+        </section>
+
         </React.Fragment>
         )
     }

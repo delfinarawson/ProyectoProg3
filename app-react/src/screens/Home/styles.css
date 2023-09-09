@@ -50,6 +50,12 @@ header nav a.activo {
     color: #FFF;
 }
 
+.buscador{
+    padding-top: 60px;
+    padding-left: 70px;
+    padding-bottom: 30px;
+}
+
 header .lupita{
     font-family: 'Open sans';
     color: #AAA;
