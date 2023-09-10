@@ -14,7 +14,8 @@ class Pelis extends Component{
 				<img src={`https://image.tmdb.org/t/p/w500${this.props.datosPop.poster_path}`} alt="pelis"/>
 				<h4 className="titulos-peliculas">{this.props.datosPop.title}</h4>
 				<p className="fechas">{this.props.datosPop.release_date}</p>
-                <p className="fechas">Ver más</p>
+                <button OnClick = {() => this.verMas () } > <p className="fechas">Ver más</p> </button>
+                <p className="fechas">{this.props.datosPop.overview}</p> 
                 <Link to={`/detalle/${this.props.datosPop.id}`} className="detalle">Ver detalle</Link>
         </div>
         )

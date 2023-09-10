@@ -14,8 +14,8 @@ class Pelis extends Component{
 				<img src={`https://image.tmdb.org/t/p/w500${this.props.datosUp.poster_path}`} alt="pelis"/>
 				<h4 className="titulos-peliculas">{this.props.datosUp.title}</h4>
 				<p className="fechas">{this.props.datosUp.release_date}</p>
-             
-                <p className="fechas">Ver más</p>
+                <button OnClick = {() => this.verMas () } > <p className="fechas">Ver más</p> </button>
+                <p className="fechas">{this.props.datosUp.overview}</p>
                 <Link to={`/detalle/${this.props.datosUp.id}`} className="detalle">Ver detalle</Link>
         </div>
         )
