@@ -1,0 +1,316 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'open sans';
+    color: white;
+}
+
+body{
+   background-color: black;
+   font-family: 'Playfair Display', serif;
+   /* background-image: url(../img/fotomujer.jpg); */
+   background-repeat: no-repeat;
+   
+}
+
+.imagen {
+    height: 600px;
+    width: 500px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.logo2{
+    width: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.info{
+    color: white;
+    padding-top: 80px;
+ }
+
+ .letras{
+   font-family: 'Open sans', sans-serif;
+ }
+
+.titulo {
+   font-family: 'open sans', sans-serif;
+   color: rgba(255, 255, 255, 0.706);
+   font-size: 400%;
+   margin: 2%;
+   padding-left: 8%;
+   padding-left: 3%;
+}
+
+.titulos {
+   color:  rgba(255, 255, 255, 0.706);
+}
+
+.bloque{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+ }
+ 
+.sub-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 45px;
+    }
+
+.boton-heart{ 
+   background: rgba(0, 0, 0, 0.5);
+   border: none; 
+   border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
+   padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+   color: #FFF;
+   margin-right: 20px;  
+   font-size: 18px; 
+   font-family: 'open sans', sans-serif;
+}
+
+.boton-heart:hover{
+   background: #FFF;
+   color: black;
+}
+
+.espacio{
+    width: 60%;
+    margin: 1%;
+    padding-bottom: 5px;
+    padding-right: 20px;
+}
+
+header{
+    padding: 10px ;
+    width: 100%;
+    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
+    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
+    background: rgba(0,0,0,0.9);
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    width: 200px;
+    margin-left: 50px;
+}
+
+
+/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
+
+
+
+.button{ 
+    font-family: 'open sans', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    margin-right: 100px;
+}
+
+.trailer {
+    font-size: 16px;
+    width: 85vw;
+    height: 50vw;
+    color: #FFF;
+    margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
+    display: flex; 
+    /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
+}
+
+
+.norespires{
+    padding-left: 3%;
+}
+
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.contenedor .flecha-izquierda,
+.contenedor .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    line-height: 40px;
+    width: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 100; 
+    transition: .2s ease all;
+}
+.contenedor .flecha-izquierda:hover,
+.contenedor .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.contenedor .flecha-izquierda{
+    left: 0;
+}
+
+.contenedor .flecha-derecha{
+    right: 0;
+}
+
+.contenedor-peliculas{
+    width: 100%;
+    padding: 20px 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
+}
+
+.contenedor-peliculas .galeria{
+    display: flex;
+    flex-wrap: nowrap; 
+}
+
+.contenedor-peliculas .galeria .pelicula{
+    transition: .3s ease all; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); 
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+.contenedor-peliculas .galeria .pelicula img{
+        width: 180px;
+        height: 250px;
+        margin: 30px; 
+        vertical-align: top;
+    }
+
+.pelicula {
+        color: white;
+        padding: 5px;
+        font-family: 'open sans', sans-serif;
+        text-align: center;
+}
+
+.boton{ 
+    background: rgba(0, 0, 0, 0.5);
+    border: none; 
+    border-radius: 5px; 
+    padding: 15px; 
+    color: #FFF;
+    margin-right: 20px;  
+    font-size: 18px; 
+}
+.boton i{
+    margin-right: 15px;
+}
+
+.boton:hover{
+    background: #FFF;
+    color: black;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 15px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.cadareview{
+    padding-bottom: 15px;
+}
+
+.subtitulos{
+    color: red;
+    font-size: 24px;
+    padding-left: 30px;
+    padding-top: 40px;
+    font-family: 'open sans';
+    margin-left: 50px;
+}
+
+.reseña{
+    margin-left: 50px;
+}
+
+.verTrailer{
+    padding-bottom: 30px;
+}
+
+
+footer {
+    color: #AAA;
+    size: 14px;
+    text-align: left;
+    font-family: "open sans", sans-serif;
+    padding-top: 50px;
+}
+
+.youtube{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.trailer{
+    padding: 0px;
+    margin: 0px;
+}
+
+.trailers{
+    margin: 0px;
+}
+
+@media (max-width: 768px){
+    *{
+        box-sizing: border-box;
+    }
+    header .logo {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    header .contenedor {
+        flex-direction: column; 
+        text-align: center;
+        font-size: 14px;
+    }
+    header .lupita{
+        padding-top: 10px;
+    }
+    header .contenedor {
+        flex-direction: column; 
+        text-align: center;
+        font-size: 14px;
+    }
+    .titulo {
+     padding-top: 100px;
+     font-size: 30px;
+    }
+    .bloque{
+     font-size: 10px;
+    }
+    .imagen{
+     height: 60%;
+     width: 60%;
+     margin-right: 0px;
+     padding-left: 0px;
+     padding-right: 80px;
+    }
+    .espacio{
+    width: 60%;
+    margin: 4%;
+    }
+    .boton{
+     font-size: 13px;
+    }
+ }

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import "./styles.css";
 class Detail extends Component{
     constructor(props){
         super(props)
@@ -9,7 +9,7 @@ class Detail extends Component{
     render(){
         return(
             <div className="sub-container">
-            <img className="imagen" src="" alt="no respires"/>
+            <img className="imagen" src={`https://image.tmdb.org/t/p/w500${this.props.poster_path}`} alt="no respires"/>
             <div className="letras">
                 <h2 className= "titulo">{this.props.titulo}</h2>
                 <div className="titulos espacio">FECHA DE ESTRENO</div>
