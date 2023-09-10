@@ -7,7 +7,7 @@ class Detalle extends Component{
     constructor(){
         super()
         this.state={
-            pelicula: []    }
+            peliculaDet: []    }
    
     }
     componentDidMount(){
@@ -27,7 +27,7 @@ class Detalle extends Component{
         <h1 class="titulo"></h1>
         <article class="bloque">
             {
-                this.state.peliculaDet.map((peli, idx)=> <Detail titulo={this.state.peliculaDet.title} fecha={this.state.peliculaDet.release_date} genero={"divertido"} duracion={"2:30hs"} calificacion={this.state.peliculaDet.vote_avarage} />)
+                <Detail titulo={this.state.peliculaDet.name} fecha={this.state.peliculaDet.release_date} genero={"divertido"} duracion={"2:30hs"} calificacion={this.state.peliculaDet.vote_avarage} />
             }
            
 
