@@ -11,10 +11,10 @@ class Results extends Component{
    
     }
     componentDidMount(){
-        fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.search}?api_key=75196a6b12119e0621f7373e3de1a94a`)
+        fetch(`https://api.themoviedb.org/3/search/movie?query=${this.props.match.params.search}&api_key=75196a6b12119e0621f7373e3de1a94a`)
             .then( res => res.json())
             .then(data=> this.setState({
-                resultados: data,
+                resultados: data.results,
             }))
             .catch()
 

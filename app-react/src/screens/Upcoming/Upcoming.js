@@ -30,7 +30,7 @@ class Upcoming extends Component{
             <article className="contenedor-peliculas">
             <h2 className="titulo">Todas las películas próximas a estrenarse</h2>
             <div className="galeria">
-                 {this.state.upcoming.map((peliup, idx)=> <PelisUp nkey={peliup + idx} datosUp={peliup}/>)}
+                 {this.state.upcoming.map((peliup, idx)=> <PelisUp key={peliup + idx} datosUp={peliup}/>)}
             </div>
             </article>
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>

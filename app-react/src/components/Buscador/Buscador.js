@@ -26,7 +26,6 @@ class Buscador extends Component{
             <form className="lupita" onSubmit={(e)=> this.prevernir(e)}>
                 <input className="lupita" type="text" name="busqueda" placeholder="¿Qué quiere ver?" onChange={(e)=>this.buscar(e)} value= {this.state.busqueda}></input>
                <Link to={`/busqueda/${this.state.busqueda}`}> <button type="submit" className="button">Buscar</button> </Link>
-                <p className="aviso"></p>
             </form> 
             </div>
         )
