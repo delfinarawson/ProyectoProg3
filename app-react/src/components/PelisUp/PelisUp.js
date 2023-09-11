@@ -12,7 +12,7 @@ class Pelis extends Component{
     }
     visibilidad = () => {
         this.setState({ view: !this.state.view });
-      };
+    };
 
     componentDidMount(){
         let recuperoStorage = localStorage.getItem ("favoritos");
@@ -29,7 +29,7 @@ class Pelis extends Component{
 
     }
     
-      agregarYSacarDeFavs (id){
+    agregarYSacarDeFavs (id){
         let favoritos = [];
         favoritos.push (id);
 
@@ -48,7 +48,7 @@ class Pelis extends Component{
 				<h4 className="titulos-peliculas">{this.props.datosUp.title}</h4>
                 <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosUp.id)} type="button"> {this.state.textoboton} </button>
 				<p className="fechas">{this.props.datosUp.release_date}</p>
-                <button onClick={this.visibilidad}>
+                <button onClick={this.visibilidad} type="button">
                 <p className="fechas">Ver más</p>
                 </button>
                 {this.state.view && (

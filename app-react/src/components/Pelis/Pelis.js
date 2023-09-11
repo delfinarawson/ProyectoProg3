@@ -5,19 +5,50 @@ import {Link} from "react-router-dom";
 class Pelis extends Component{
     constructor(props){
         super(props)
-        this.state={ view: false, }
+        this.state={ 
+            view: false, 
+            textoboton: "Agregar a favoritos"
+         }
     }
     visibilidad = () => {
         this.setState({ view: !this.state.view });
-      };
+    };
+
+    componentDidMount(){
+        let recuperoStorage = localStorage.getItem ("favoritos");
+        
+        if (recuperoStorage !== null) {
+            let favoritos = JSON.parse (recuperoStorage);
+
+            if (favoritos.includes (this.props.datosPop.id)){
+                this.setState ({
+                    textoBoton: "Quitar de favoritos"
+                })
+            }
+        }
+
+    }
+
+    agregarYSacarDeFavs (id){
+        let favoritos = [];
+        favoritos.push (id);
+
+        let favoritostoString= JSON.stringify(favoritos);
+        localStorage.setItem ("favoritos", favoritostoString);
+
+        this.setState ({
+            textoBoton: "Quitar de favoritos",
+        })
+    }
 
     render(){
         return(
         <div className = "pelicula"> 
 				<img src={`https://image.tmdb.org/t/p/w500${this.props.datosPop.poster_path}`} alt="pelis"/>
 				<h4 className="titulos-peliculas">{this.props.datosPop.title}</h4>
+                <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosPop.id)} type="button"> {this.state.textoboton} </button>
 				<p className="fechas">{this.props.datosPop.release_date}</p>
-                <button onClick={this.visibilidad}>
+                <button onClick={this.visibilidad} type="button">
                 <p className="fechas">Ver más</p>
                 </button>
                 {this.state.view && (
