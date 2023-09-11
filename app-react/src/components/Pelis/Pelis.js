@@ -11,7 +11,7 @@ class Pelis extends Component{
          }
     }
     visibilidad = () => {
-        this.setState({ view: !this.state.view });
+       this.setState({ view: !this.state.view });
     };
 
     componentDidMount(){
@@ -42,7 +42,7 @@ class Pelis extends Component{
             this.setState ({
                 textoBoton: "Agregar a favoritos"
             })
-            
+
          } else {
             favoritos.push (id);
             this.setState ({
