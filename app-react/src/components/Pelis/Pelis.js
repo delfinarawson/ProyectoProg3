@@ -7,7 +7,7 @@ class Pelis extends Component{
         super(props)
         this.state={ 
             view: false, 
-            textoboton: "Agregar a favoritos"
+            textoBoton: "Agregar a favoritos"
          }
     }
     visibilidad = () => {
@@ -19,8 +19,8 @@ class Pelis extends Component{
         
         if (recuperoStorage !== null) {
             let favoritos = JSON.parse (recuperoStorage);
-
-            if (favoritos.includes (this.props.datosPop.id)){
+            console.log(favoritos.includes(this.props.datosPop.id));
+            if (favoritos.includes(this.props.datosPop.id)){
                 this.setState ({
                     textoBoton: "Quitar de favoritos"
                 })
@@ -58,11 +58,12 @@ class Pelis extends Component{
     }
 
     render(){
+        console.log(this.props);
         return(
         <div className = "pelicula"> 
 				<img src={`https://image.tmdb.org/t/p/w500${this.props.datosPop.poster_path}`} alt="pelis"/>
 				<h4 className="titulos-peliculas">{this.props.datosPop.title}</h4>
-                <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosPop.id)} type="button"> {this.state.textoboton} </button>
+                <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosPop.id)} type="button"> {this.state.textoBoton} </button>
 				<p className="fechas">{this.props.datosPop.release_date}</p>
                 <button onClick={this.visibilidad} type="button">
                 <p className="fechas">Ver más</p>
