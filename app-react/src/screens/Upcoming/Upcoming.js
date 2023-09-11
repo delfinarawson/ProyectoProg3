@@ -59,7 +59,7 @@ class Upcoming extends Component{
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
         </section>
 
-        <button onClick={() => this.traerMas(this.state.upcoming)}>Traer Más</button>
+        <button onClick={() => this.traerMas(this.state.upcoming)} className="boton tmas">Traer Más</button>
 
         </React.Fragment>
         )

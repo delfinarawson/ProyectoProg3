@@ -49,7 +49,6 @@ header nav a{
     color: #AAA;
     text-decoration: none;
     margin-right: 20px;
-    font-family: 'Open Sans', sans-serif;
 }
 
 header nav a:hover,
@@ -57,29 +56,45 @@ header nav a.activo {
     color: #FFF;
 }
 
-.buscador{
-    padding-top: 60px;
-    padding-left: 70px;
-    padding-bottom: 30px;
-}
-
-header .lupita{
-    font-family: 'Open sans';
+.lupita{
     color: #AAA;
     background: rgba(0, 0, 0, 0.5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.button{ 
-    font-family: 'open sans', sans-serif;
+.buscador{
+    padding-left: 100px;
+}
+
+.boton{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: rgba(0, 0, 0, 0.5);
-    color:white;
+    color: #FFF;
+    border-radius: 5px;
+    border: none; 
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.busq{
     margin-left: 30px;
+}
+
+.boton:hover{
+    background: #FFF;
+    color: black;
 }
 
 .container {
     display: flex;
     flex-wrap: nowrap;
     margin: 30px
+}
+
+.tmas{
+    padding-left: 100px;
+    margin-left: 100px;
 }
 
 /* Aca hice lo de la pelicula principal */
@@ -132,10 +147,13 @@ header .lupita{
 
 .contenedor{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
     width: 90%;
     margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .contenedor .flecha-izquierda,
@@ -202,26 +220,11 @@ header .lupita{
         font-family: 'open sans', sans-serif;
         text-align: center;
 }
-.boton-heart{ 
-    background: rgba(0, 0, 0, 0.5);
-    border: none; 
-    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
-    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
-    color: #FFF;
-    margin-right: 20px;  
-    font-size: 18px; 
-    font-family: 'open sans', sans-serif;
- }
  
- .boton-heart:hover{
-    background: #FFF;
-    color: black;
- }
- 
-
 .titulo{
     font-family: "open sans", sans-serif;
     color: white;
+
 }
 
 .fechas {
