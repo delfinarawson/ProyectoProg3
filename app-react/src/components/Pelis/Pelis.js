@@ -42,6 +42,7 @@ class Pelis extends Component{
             this.setState ({
                 textoBoton: "Agregar a favoritos"
             })
+            
          } else {
             favoritos.push (id);
             this.setState ({
