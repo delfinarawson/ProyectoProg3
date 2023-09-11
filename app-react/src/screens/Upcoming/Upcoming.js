@@ -2,18 +2,19 @@ import React, { Component } from "react";
 import PelisUp from "../../components/PelisUp/PelisUp.js";
 import "./styles.css";
 //import "https://kit.fontawesome.com/ed388a348f.js";
+import Filtrado from "../../components/Filtrado/Filtrado.js"
 
 class Upcoming extends Component{
     constructor(){
         super()
         this.state={
-            populares: [],
             upcoming:[],
+            page:1
     }
    
     }
     componentDidMount(){
-        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=75196a6b12119e0621f7373e3de1a94a")
+        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=75196a6b12119e0621f7373e3de1a94a"+this.state.page)
             .then( res => res.json())
             .then(data=> this.setState({
                 upcoming: data.results,
@@ -21,10 +22,21 @@ class Upcoming extends Component{
             .catch()
     };
 
+    filtrarUpcoming(peliAFiltrar){
+        //que deje solo las pelis en donde el texto a filtrar este incluido en el nombre. 
+        let pelisFiltradas = this.state.upcoming.filter(function(peliup){
+            return peliup.title.includes(peliAFiltrar) //includes retorna true o false
+        })
+        console.log(pelisFiltradas);
+        this.setState({
+            upcoming: pelisFiltradas,
+        })
+    }
+
     render(){
         return(
         <React.Fragment>
-
+        <Filtrado filtrar={(texto)=> this.filtrarUpcoming(texto)}/>
         <section className="contenedor">
             <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
             <article className="contenedor-peliculas">
@@ -35,14 +47,6 @@ class Upcoming extends Component{
             </article>
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
         </section>
-
-        <form className="lupita" action="./busqueda.html" method="get">
-            <input className="lupita" type="text" name="filtro" placeholder="¿Qué filtro desea aplicar?" value=""></input>
-            <button type="submit" className="button">filtrar</button>
-            <p className="aviso"></p>
-        </form>
-       
-        
         </React.Fragment>
         )
     }
