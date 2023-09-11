@@ -9,14 +9,16 @@ class Upcoming extends Component{
         super()
         this.state={
             upcoming:[],
+            page:1
     }
    
     }
     componentDidMount(){
-        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=75196a6b12119e0621f7373e3de1a94a")
+        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=75196a6b12119e0621f7373e3de1a94a&page="+this.state.page)
             .then( res => res.json())
             .then(data=> this.setState({
                 upcoming: data.results,
+                page: this.state.page+1
              }))
             .catch()
     };
@@ -30,6 +32,16 @@ class Upcoming extends Component{
         this.setState({
             upcoming: pelisFiltradas,
         })
+    };
+
+    traerMas(){
+        fetch("https://api.themoviedb.org/3/movie/popular?api_key=75196a6b12119e0621f7373e3de1a94a&page="+this.state.page)
+            .then( res => res.json())
+            .then(data=> this.setState({
+                upcoming: this.state.upcoming.concat(data.results),
+                page: this.state.page+1
+            }))
+            .catch()
     }
 
     render(){
@@ -46,6 +58,9 @@ class Upcoming extends Component{
             </article>
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
         </section>
+
+        <button onClick={() => this.traerMas(this.state.upcoming)}>Traer Más</button>
+
         </React.Fragment>
         )
     }

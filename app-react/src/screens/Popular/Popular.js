@@ -35,6 +35,16 @@ class Popular extends Component{
         this.setState({
             populares: pelisFiltradas,
         })
+    };
+
+    traerMas(){
+        fetch("https://api.themoviedb.org/3/movie/popular?api_key=75196a6b12119e0621f7373e3de1a94a&page="+this.state.page)
+            .then( res => res.json())
+            .then(data=> this.setState({
+                populares: this.state.populares.concat(data.results),
+                page: this.state.page+1
+            }))
+            .catch()
     }
 
     render(){
@@ -51,6 +61,10 @@ class Popular extends Component{
                 </article>
                 <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
             </section>
+
+            <button onClick={() => this.traerMas(this.state.populares)}>Traer Más</button>
+
+
         </React.Fragment>
         )
     }
