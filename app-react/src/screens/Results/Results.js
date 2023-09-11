@@ -24,6 +24,8 @@ class Results extends Component{
     render(){
         return(
         <React.Fragment>
+            {
+            this.state.resultados.length > 0 ?
         <section className="contenedor">
 
         <button role="boton" id="flecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
@@ -38,7 +40,8 @@ class Results extends Component{
             </div>
         </article>
         <button role="boton" id="flecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
-        </section>
+        </section>:
+         <h3>Loading...</h3>}
         
         </React.Fragment>
         )
