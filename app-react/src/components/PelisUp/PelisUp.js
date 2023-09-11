@@ -7,7 +7,7 @@ class Pelis extends Component{
         super(props)
         this.state={ 
             view: false, 
-            textoboton: "Agregar a favoritos"
+            textoBoton: "Agregar a favoritos"
         }
     }
     visibilidad = () => {
@@ -60,7 +60,7 @@ class Pelis extends Component{
         <div className = "pelicula"> 
 				<img src={`https://image.tmdb.org/t/p/w500${this.props.datosUp.poster_path}`} alt="pelis"/>
 				<h4 className="titulos-peliculas">{this.props.datosUp.title}</h4>
-                <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosUp.id)} type="button"> {this.state.textoboton} </button>
+                <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosUp.id)} type="button"> {this.state.textoBoton} </button>
 				<p className="fechas">{this.props.datosUp.release_date}</p>
                 <button onClick={this.visibilidad} type="button">
                 <p className="fechas">Ver más</p>
