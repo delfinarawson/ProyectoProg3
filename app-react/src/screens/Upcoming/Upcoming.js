@@ -9,12 +9,11 @@ class Upcoming extends Component{
         super()
         this.state={
             upcoming:[],
-            page:1
     }
    
     }
     componentDidMount(){
-        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=75196a6b12119e0621f7373e3de1a94a"+this.state.page)
+        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=75196a6b12119e0621f7373e3de1a94a")
             .then( res => res.json())
             .then(data=> this.setState({
                 upcoming: data.results,
@@ -38,14 +37,14 @@ class Upcoming extends Component{
         <React.Fragment>
         <Filtrado filtrar={(texto)=> this.filtrarUpcoming(texto)}/>
         <section className="contenedor">
-            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
+            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
             <article className="contenedor-peliculas">
             <h2 className="titulo">Todas las películas próximas a estrenarse</h2>
             <div className="galeria">
                  {this.state.upcoming.map((peliup, idx)=> <PelisUp key={peliup + idx} datosUp={peliup}/>)}
             </div>
             </article>
-            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
+            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
         </section>
         </React.Fragment>
         )

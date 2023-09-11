@@ -42,14 +42,14 @@ class Popular extends Component{
         <React.Fragment>
             <Filtrado filtrar={(texto)=> this.filtrarPopulares(texto)}/>
             <section className="contenedor">
-                <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
+                <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
                 <article className="contenedor-peliculas">
                 <h2 className="titulo">Todas las películas populares</h2>
                 <div className="galeria">
                     {this.state.populares.map((peli, idx)=> <Pelis key={peli + idx} datosPop={peli}/>)}
                 </div>
                 </article>
-                <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="icon-angle-right"></i></button>
+                <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
             </section>
         </React.Fragment>
         )
