@@ -3,7 +3,6 @@ import Buscador from "../../components/Buscador/Buscador";
 import Pelis from "../../components/Pelis/Pelis";
 import PelisUp from "../../components/PelisUp/PelisUp.js";
 import "./styles.css";
-import "https://kit.fontawesome.com/ed388a348f.js";
 
 
 class Home extends Component{
@@ -47,7 +46,7 @@ class Home extends Component{
         </section>
 
         <section className="contenedor">
-            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="icon-angle-left"></i></button>
+            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
             <article className="contenedor-peliculas">
             <h2 className="titulo">Películas próximas a estrenarse</h2>
             <div className="galeria">

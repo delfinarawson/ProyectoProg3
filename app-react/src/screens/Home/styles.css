@@ -6,7 +6,7 @@
 
 body{
     background-color: black;
-    font-family: 'Open Sans', sans-;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header{
@@ -17,6 +17,13 @@ body{
     background: rgba(0,0,0,0.9);
 }
 
+main {
+    padding-top: 80px;
+}
+
+form input {
+    color: #000
+}
 .inicio{
     display: flex;
     justify-content: space-between;
