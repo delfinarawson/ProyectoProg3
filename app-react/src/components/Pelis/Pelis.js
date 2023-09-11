@@ -31,14 +31,29 @@ class Pelis extends Component{
 
     agregarYSacarDeFavs (id){
         let favoritos = [];
-        favoritos.push (id);
+        let recuperoStorage = localStorage.getItem ("favoritos");
+
+        if (recuperoStorage !== null) {  
+            favoritos = JSON.parse(recuperoStorage);
+        }
+
+        if (favoritos.includes (id)){ 
+            favoritos = favoritos.filter (unId => unId !== id )
+            this.setState ({
+                textoBoton: "Agregar a favoritos"
+            })
+         } else {
+            favoritos.push (id);
+            this.setState ({
+                textoBoton: "Quitar de favoritos",
+            })
+         }
+
 
         let favoritostoString= JSON.stringify(favoritos);
         localStorage.setItem ("favoritos", favoritostoString);
-
-        this.setState ({
-            textoBoton: "Quitar de favoritos",
-        })
+        
+    
     }
 
     render(){
