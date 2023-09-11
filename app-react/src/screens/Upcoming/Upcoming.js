@@ -48,6 +48,8 @@ class Upcoming extends Component{
         return(
         <React.Fragment>
         <Filtrado filtrar={(texto)=> this.filtrarUpcoming(texto)}/>
+        {
+            this.state.upcoming.length > 0 ?
         <section className="contenedor">
             <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
             <article className="contenedor-peliculas">
@@ -57,7 +59,8 @@ class Upcoming extends Component{
             </div>
             </article>
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
-        </section>
+        </section>:
+        <h3>Loading...</h3>}
 
         <button onClick={() => this.traerMas(this.state.upcoming)}>Traer Más</button>
 

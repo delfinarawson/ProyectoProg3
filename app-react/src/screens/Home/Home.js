@@ -33,8 +33,9 @@ class Home extends Component{
         return(
         <React.Fragment>
         <Buscador/>
-
-        <section className="contenedor">
+        {
+            this.state.populares.length > 0 ?
+            <section className="contenedor">
             <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
             <article className="contenedor-peliculas">
             <h2 className="titulo">Películas Populares</h2>
@@ -43,8 +44,14 @@ class Home extends Component{
             </div>
             </article>
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
-        </section>
-
+        </section>:
+        <h3>Loading...</h3>
+        
+        
+    }
+    
+    {
+            this.state.upcoming.length > 0 ?
         <section className="contenedor">
             <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
             <article className="contenedor-peliculas">
@@ -54,10 +61,8 @@ class Home extends Component{
             </div>
             </article>
             <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
-        </section>
-
-
-       
+        </section>:
+        <h3>Loading...</h3>}
        
         
         </React.Fragment>
