@@ -65,7 +65,7 @@ class Popular extends Component{
             </section>:
             <h3>Loading...</h3>}
 
-            <button onClick={() => this.traerMas(this.state.populares)}>Traer Más</button>
+            <button onClick={() => this.traerMas(this.state.populares)} className="boton">Traer Más</button>
 
 
         </React.Fragment>

@@ -60,15 +60,13 @@ class Pelis extends Component{
         <div className = "pelicula"> 
 				<img src={`https://image.tmdb.org/t/p/w500${this.props.datosUp.poster_path}`} alt="pelis"/>
 				<h4 className="titulos-peliculas">{this.props.datosUp.title}</h4>
-                <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosUp.id)} type="button"> {this.state.textoBoton} </button>
+                <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosUp.id)} type="button" className="boton"> {this.state.textoBoton} </button>
 				<p className="fechas">{this.props.datosUp.release_date}</p>
-                <button onClick={this.visibilidad} type="button">
-                <p className="fechas">Ver más</p>
-                </button>
+                <button onClick={this.visibilidad} type="button" className="boton mas"><i class="fa-solid fa-play"></i>Ver más</button>
                 {this.state.view && (
                 <p className="fechas">{this.props.datosUp.overview}</p>
                 )}
-                <Link to={`/detalle/${this.props.datosUp.id}`} className="detalle">Ver detalle</Link>
+                <Link to={`/detalle/${this.props.datosUp.id}`} className="boton det"><i class="fa-solid fa-circle-info"></i>Ver detalle</Link>
         </div>
         )
     }

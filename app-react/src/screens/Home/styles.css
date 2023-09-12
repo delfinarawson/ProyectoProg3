@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
 }
 
 body{
     background-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header{
@@ -59,7 +59,7 @@ header nav a.activo {
 .lupita{
     color: #AAA;
     background: rgba(0, 0, 0, 0.5);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
 }
 
 .buscador{
@@ -67,7 +67,6 @@ header nav a.activo {
 }
 
 .boton{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: rgba(0, 0, 0, 0.5);
     color: #FFF;
     border-radius: 5px;
@@ -75,6 +74,7 @@ header nav a.activo {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 15px;
 }
 
 .busq{
@@ -112,35 +112,28 @@ header nav a.activo {
 
 /* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
 
-.pelicula-principal .peli {
+.peli {
     margin: 0 auto;
     margin: 5vh;
 }
-.pelicula-principal .titulo {
+.titulo {
     font-weight: 600; /* es el que descargue que era el semi bold */ 
     font-size: 30px; 
     margin-bottom: 2vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
 }
-.pelicula-principal .descripcion {
+
+.descripcion {
     font-weight: normal; 
     font-size: 16px;
     line-height: 18px;
     max-width: 50%; 
     margin-bottom: 2vh;
 }
-.pelicula-principal .boton{ 
-    background: rgba(0, 0, 0, 0.5);
-    border: none; 
-    border-radius: 5px; 
-    padding: 15px; 
-    color: #FFF;
-    margin-right: 20px;  
-    font-size: 18px; 
-}
-.pelicula-principal .boton i{
+
+.boton i{
     margin-right: 15px;
 }
-.pelicula-principal .boton:hover{
+.boton:hover{
     background: #FFF;
     color: black;
 }
@@ -200,7 +193,21 @@ header nav a.activo {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); 
     justify-content: space-between;
     min-width: 20%;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
 }
+
+.det{
+    margin-left: 40px;
+}
+
+.mas{
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
 
 .espacio .genero{
     color: white;
@@ -214,23 +221,9 @@ header nav a.activo {
         vertical-align: top;
     }
 
-.pelicula {
-        color: white;
-        padding: 5px;
-        font-family: 'open sans', sans-serif;
-        text-align: center;
-}
- 
-.titulo{
-    font-family: "open sans", sans-serif;
-    color: white;
-
-}
-
 .fechas {
     color: #AAA ;
     text-align: center;
-    font-family: 'Arial, Helvetica', sans-serif;
 }
 
  
@@ -238,7 +231,6 @@ footer {
     color: #AAA;
     size: 14px;
     text-align: left;
-    font-family: "open sans", sans-serif;
     padding-top: 50px;
 }
 
