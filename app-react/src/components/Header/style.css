@@ -1,0 +1,7 @@
+header li{
+    list-style-type: none;
+}
+.logo{
+    height: 150px;
+    width: 180px;
+}
