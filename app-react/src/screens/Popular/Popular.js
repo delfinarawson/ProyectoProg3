@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Pelis from "../../components/Pelis/Pelis";
-import "./styles.css";
 //import "https://kit.fontawesome.com/ed388a348f.js";
 import Filtrado from "../../components/Filtrado/Filtrado";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
@@ -65,7 +64,7 @@ class Popular extends Component{
             </section>:
             <h3>Loading...</h3>}
 
-            <button onClick={() => this.traerMas(this.state.populares)} className="boton">Traer Más</button>
+            <button onClick={() => this.traerMas(this.state.populares)} className="boton tmas"><i class="fa-solid fa-ticket"></i>Traer Más</button>
 
 
         </React.Fragment>

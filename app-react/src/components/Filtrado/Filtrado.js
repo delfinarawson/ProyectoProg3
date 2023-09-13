@@ -27,9 +27,8 @@ class Filtrado extends Component{
         return(
         <div className="buscador">
         <form action="" className="lupita" method="GET" onSubmit={(e) => this.controlarEnvio(e)}>
-            <label htmlFor="">Texto a filtrar:</label>
-            <input type="text" name="filtro" onChange={(e) => this.guardarDatosDelInput(e)} value={this.state.textoDelInput} />
-            <button type="button">Filtrar </button>
+            <input type="text" name="filtro" placeholder="Texto a filtrar" className="lupita" onChange={(e) => this.guardarDatosDelInput(e)} value={this.state.textoDelInput} />
+            <button type="button" className="boton busq">Filtrar </button>
         </form>
         </div>
         )

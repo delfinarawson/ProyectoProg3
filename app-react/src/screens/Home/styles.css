@@ -63,7 +63,8 @@ header nav a.activo {
 }
 
 .buscador{
-    padding-left: 100px;
+    padding-top: 60px;
+    padding-left: 110px;
 }
 
 .boton{
@@ -93,7 +94,6 @@ header nav a.activo {
 }
 
 .tmas{
-    padding-left: 100px;
     margin-left: 100px;
 }
 
@@ -120,6 +120,11 @@ header nav a.activo {
     font-weight: 600; /* es el que descargue que era el semi bold */ 
     font-size: 30px; 
     margin-bottom: 2vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
+    padding-left: 10px;
+}
+
+.tituloFavs{
+    padding-top: 30px;
 }
 
 .descripcion {
@@ -224,6 +229,11 @@ header nav a.activo {
 .fechas {
     color: #AAA ;
     text-align: center;
+}
+
+.loading{
+    padding-left: 100px;
+    padding-top: 200px;
 }
 
  

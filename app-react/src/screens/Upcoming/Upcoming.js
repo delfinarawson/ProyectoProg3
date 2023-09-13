@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PelisUp from "../../components/PelisUp/PelisUp.js";
-import "./styles.css";
 //import "https://kit.fontawesome.com/ed388a348f.js";
 import Filtrado from "../../components/Filtrado/Filtrado.js"
 
@@ -62,7 +61,7 @@ class Upcoming extends Component{
         </section>:
         <h3>Loading...</h3>}
 
-        <button onClick={() => this.traerMas(this.state.upcoming)} className="boton tmas">Traer Más</button>
+        <button onClick={() => this.traerMas(this.state.upcoming)} className="boton tmas"><i class="fa-solid fa-ticket"></i>Traer Más</button>
 
         </React.Fragment>
         )
