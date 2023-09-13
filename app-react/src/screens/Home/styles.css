@@ -95,6 +95,8 @@ header nav a.activo {
 
 .tmas{
     margin-left: 100px;
+    margin-top: 30px;
+    background: rgba(221, 207, 207, 0.5);
 }
 
 /* Aca hice lo de la pelicula principal */
@@ -236,13 +238,29 @@ header nav a.activo {
     padding-top: 200px;
 }
 
+.error {
+    color: red;
+    margin-top: 150px;
+    margin-left: 110px;
+}
+
+.error2{
+    margin-left: 100px;
+}
  
 footer {
-    color: #AAA;
-    size: 14px;
-    text-align: left;
-    padding-top: 50px;
+    margin-top: 60px;
+    text-align: center;
+    color: white;
+    font-family: 'open sans';
+    font-size: 15px;
+    margin-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
+
 
 @media (max-width: 768px){
     header .logo {

@@ -62,7 +62,8 @@ class Popular extends Component{
                 </article>
                 <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
             </section>:
-            <h3>Loading...</h3>}
+            
+            <h3 className="loading">Loading...</h3>}
 
             <button onClick={() => this.traerMas(this.state.populares)} className="boton tmas"><i class="fa-solid fa-ticket"></i>Traer Más</button>
 

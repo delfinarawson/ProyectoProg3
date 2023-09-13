@@ -5,4 +5,8 @@
     font-family: 'open sans';
     font-size: 15px;
     margin-bottom: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
