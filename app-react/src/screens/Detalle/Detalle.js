@@ -7,7 +7,7 @@ class Detalle extends Component{
     constructor(){
         super()
         this.state={
-            peliculaDet: []    }
+            peliculaDet: undefined    }
    
     }
     componentDidMount(){
@@ -23,16 +23,19 @@ class Detalle extends Component{
     render(){
         return(
         <React.Fragment>
+             {
+            this.state.peliculaDet !== undefined ?
        <section class="info">
         <h1 class="titulo"></h1>
         <article class="bloque">
             {
-                <Detail poster_path={this.state.peliculaDet.poster_path} titulo={this.state.peliculaDet.name} fecha={this.state.peliculaDet.release_date} genero={this.state.peliculaDet.genres_id} duracion={this.state.peliculaDet.runtime + " Minutos"} calificacion={this.state.peliculaDet.vote_average} />
+                <Detail poster_path={this.state.peliculaDet.poster_path} titulo={this.state.peliculaDet.name} fecha={this.state.peliculaDet.release_date} genero={this.state.peliculaDet.genres === undefined ?[]: this.state.peliculaDet.genres} duracion={this.state.peliculaDet.runtime + " Minutos"} calificacion={this.state.peliculaDet.vote_average} />
             }
            
 
         </article>
-    </section>
+    </section>: 
+    <h3 className="loading">Loading...</h3>}
 
         </React.Fragment>
         )
