@@ -27,7 +27,7 @@ class Detalle extends Component{
         <h1 class="titulo"></h1>
         <article class="bloque">
             {
-                <Detail poster_path={this.state.peliculaDet.poster_path} titulo={this.state.peliculaDet.name} fecha={this.state.peliculaDet.release_date} genero={this.state.peliculaDet.genres_id} duracion={"2:30hs"} calificacion={this.state.peliculaDet.vote_average} />
+                <Detail poster_path={this.state.peliculaDet.poster_path} titulo={this.state.peliculaDet.name} fecha={this.state.peliculaDet.release_date} genero={this.state.peliculaDet.genres_id} duracion={this.state.peliculaDet.runtime} calificacion={this.state.peliculaDet.vote_average} />
             }
            
 
