@@ -62,11 +62,11 @@ class Pelis extends Component{
 				<h4 className="titulos-peliculas">{this.props.datosUp.title}</h4>
                 <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosUp.id)} type="button" className="boton"> {this.state.textoBoton} </button>
 				<p className="fechas">{this.props.datosUp.release_date}</p>
-                <button onClick={this.visibilidad} type="button" className="boton mas"><i class="fa-solid fa-play"></i>Ver más</button>
+                <button onClick={this.visibilidad} type="button" className="boton mas"><i className="fa-solid fa-play"></i>Ver más</button>
                 {this.state.view && (
                 <p className="fechas">{this.props.datosUp.overview}</p>
                 )}
-                <Link to={`/detalle/${this.props.datosUp.id}`} className="boton det"><i class="fa-solid fa-circle-info"></i>Ver detalle</Link>
+                <Link to={`/detalle/${this.props.datosUp.id}`} className="boton det"><i className="fa-solid fa-circle-info"></i>Ver detalle</Link>
         </div>
         )
     }

@@ -25,9 +25,9 @@ class Detalle extends Component{
         <React.Fragment>
              {
             this.state.peliculaDet !== undefined ?
-       <section class="info">
-        <h1 class="titulo"></h1>
-        <article class="bloque">
+       <section className="info">
+        <h1 className="titulo"></h1>
+        <article className="bloque">
             {
                 <Detail poster_path={this.state.peliculaDet.poster_path} titulo={this.state.peliculaDet.original_title} fecha={this.state.peliculaDet.release_date} genero={this.state.peliculaDet.genres === undefined ?[]: this.state.peliculaDet.genres} duracion={this.state.peliculaDet.runtime + " Minutos"} calificacion={this.state.peliculaDet.vote_average} />
             }

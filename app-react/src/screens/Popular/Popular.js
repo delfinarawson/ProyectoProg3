@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Pelis from "../../components/Pelis/Pelis";
 //import "https://kit.fontawesome.com/ed388a348f.js";
 import Filtrado from "../../components/Filtrado/Filtrado";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 class Popular extends Component{
     constructor(){
@@ -53,19 +52,19 @@ class Popular extends Component{
             {
             this.state.populares.length > 0 ?
             <section className="contenedor">
-                <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
+                <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="fa-solid fa-angle-left"></i></button>
                 <article className="contenedor-peliculas">
                 <h2 className="titulo">Todas las películas populares</h2>
                 <div className="galeria">
                     {this.state.populares.map((peli, idx)=> <Pelis key={peli + idx} datosPop={peli}/>)}
                 </div>
                 </article>
-                <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
+                <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="fa-solid fa-angle-right"></i></button>
             </section>:
             
             <h3 className="loading">Loading...</h3>}
 
-            <button onClick={() => this.traerMas(this.state.populares)} className="boton tmas"><i class="fa-solid fa-ticket"></i>Traer Más</button>
+            <button onClick={() => this.traerMas(this.state.populares)} className="boton tmas"><i className="fa-solid fa-ticket"></i>Traer Más</button>
 
 
         </React.Fragment>

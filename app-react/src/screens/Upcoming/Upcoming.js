@@ -50,18 +50,18 @@ class Upcoming extends Component{
         {
             this.state.upcoming.length > 0 ?
         <section className="contenedor">
-            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
+            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="fa-solid fa-angle-left"></i></button>
             <article className="contenedor-peliculas">
             <h2 className="titulo">Todas las películas próximas a estrenarse</h2>
             <div className="galeria">
                  {this.state.upcoming.map((peliup, idx)=> <PelisUp key={peliup + idx} datosUp={peliup}/>)}
             </div>
             </article>
-            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
+            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="fa-solid fa-angle-right"></i></button>
         </section>:
         <h3 className="loading">Loading...</h3>}
 
-        <button onClick={() => this.traerMas(this.state.upcoming)} className="boton tmas"><i class="fa-solid fa-ticket"></i>Traer Más</button>
+        <button onClick={() => this.traerMas(this.state.upcoming)} className="boton tmas"><i className="fa-solid fa-ticket"></i>Traer Más</button>
 
         </React.Fragment>
         )

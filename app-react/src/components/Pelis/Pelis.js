@@ -65,11 +65,11 @@ class Pelis extends Component{
 				<h4 className="titulos-peliculas">{this.props.datosPop.title}</h4>
                 <button onClick={()=> this.agregarYSacarDeFavs(this.props.datosPop.id)} type="button" className="boton"> {this.state.textoBoton} </button>
 				<p className="fechas">{this.props.datosPop.release_date}</p>
-                <button onClick={this.visibilidad} type="button" className="boton mas"><i class="fa-solid fa-play"></i>Ver más</button>
+                <button onClick={this.visibilidad} type="button" className="boton mas"><i className="fa-solid fa-play"></i>Ver más</button>
                 {this.state.view && (
                 <p className="fechas">{this.props.datosPop.overview}</p>
                 )} 
-                <Link to={`/detalle/${this.props.datosPop.id}`} className="boton det"><i class="fa-solid fa-circle-info"></i>Ver detalle</Link>
+                <Link to={`/detalle/${this.props.datosPop.id}`} className="boton det"><i className="fa-solid fa-circle-info"></i>Ver detalle</Link>
         </div>
         )
     }

@@ -36,14 +36,14 @@ class Home extends Component{
         {
             this.state.populares.length > 0 ?
             <section className="contenedor">
-            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
+            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="fa-solid fa-angle-left"></i></button>
             <article className="contenedor-peliculas">
             <h2 className="titulo">Películas Populares</h2>
             <div className="galeria">
                 {this.state.populares.slice(0,6).map((peli, idx)=> <Pelis key={peli + idx} datosPop={peli}/>)}
             </div>
             </article>
-            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
+            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="fa-solid fa-angle-right"></i></button>
         </section>:
         <h3>Loading...</h3>
         
@@ -53,14 +53,14 @@ class Home extends Component{
     {
             this.state.upcoming.length > 0 ?
         <section className="contenedor">
-            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i class="fa-solid fa-angle-left"></i></button>
+            <button role="boton" id="flecha-derecha" className="flecha-izquierda"><i className="fa-solid fa-angle-left"></i></button>
             <article className="contenedor-peliculas">
             <h2 className="titulo">Películas próximas a estrenarse</h2>
             <div className="galeria">
                  {this.state.upcoming.slice(0,6).map((peliup, idx)=> <PelisUp nkey={peliup + idx} datosUp={peliup}/>)}
             </div>
             </article>
-            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i class="fa-solid fa-angle-right"></i></button>
+            <button role="boton" id="flecha-derecha" className="flecha-derecha"><i className="fa-solid fa-angle-right"></i></button>
         </section>:
         <h3 className="loading">Loading...</h3>}
        

@@ -99,19 +99,6 @@ header nav a.activo {
     background: rgba(221, 207, 207, 0.5);
 }
 
-/* Aca hice lo de la pelicula principal */
-.pelicula-principal {
-    font-size: 16px;
-    min-height: 100vh;
-    color: #FFF;
-    background: url();
-    background-position: center end; /* dos centers: lo centre de forma horizontal y luego vertical */
-    background-size: cover;
-    margin-bottom: 50px;
-    display: flex;  /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
-    align-items: end;
-} 
-
 /* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
 
 .peli {
@@ -262,7 +249,8 @@ footer {
 }
 
 
-@media (max-width: 768px){
+
+@media (max-width: 752px){
     header .logo {
         margin-bottom: 10px;
         font-size: 15px;
@@ -293,5 +281,10 @@ footer {
     .contenedor .flecha-derecha {
         display: none;
     }
+    .titulo{
+        padding-top: 10px;
+    } 
 }
+
+
 
